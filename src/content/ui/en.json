@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "PBLAND 9",
-    "description": "PBLAND 9 is a seed-stage startup, since 2026, based in Korea and Japan. Friends from various industries quickly build small businesses, take on outsourced development, and add features for clients."
+    "title": "PBLAND9",
+    "description": "PBLAND9 is a seed-stage startup, since 2026, based in Korea and Japan. Friends from various industries quickly build small businesses, take on outsourced development, and add features for clients."
   },
   "aria": {
     "nav": "Primary",
@@ -16,13 +16,13 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "PBLAND 9",
+    "title": "PBLAND9",
     "subtitle": "Since 2026. A seed-stage startup based in Korea and Japan."
   },
   "about": {
     "heading": "About",
     "paragraphs": [
-      "PBLAND 9 is a seed-stage startup, since 2026, based in Korea and Japan. Friends from various industries come together to quickly build small businesses, take on outsourced development, and rapidly add features for clients.",
+      "PBLAND9 is a seed-stage startup, since 2026, based in Korea and Japan. Friends from various industries come together to quickly build small businesses, take on outsourced development, and rapidly add features for clients.",
       "We turn an idea into something that actually runs, in short cycles, then keep attaching the automation and integrations that day-to-day operations need.",
       "We would rather finish what is needed now and move to the next step than grow the scope for its own sake."
     ]
@@ -71,10 +71,10 @@
   },
   "contact": {
     "heading": "Contact",
-    "body": "For a small business, outsourced development, or a feature to add, write to cs_pbland9@pbland9.com.",
+    "body": "For a small business, outsourced development, or a feature to add, email cs_pbland9@pbland9.com. Want more? You can request materials. Email that address.",
     "button": "Email us"
   },
   "footer": {
-    "rights": "© PBLAND 9"
+    "rights": "© PBLAND9"
   }
 }

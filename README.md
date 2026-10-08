@@ -1,4 +1,4 @@
-# PBLAND 9
+# PBLAND9
 
 한국어·영어 한 페이지 정적 사이트입니다. Astro 5로 만들고, GitHub Pages에 커스텀 도메인 `pbland9.com` 으로 올리는 것을 기준으로 합니다. `base` 는 `/` 입니다. 저장소 이름과 무관합니다.
 
