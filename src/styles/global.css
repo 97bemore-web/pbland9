@@ -25,6 +25,9 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   background: var(--paper);
   color: var(--text);
@@ -32,6 +35,10 @@ body {
   font-size: 16px;
   line-height: 1.75;
   text-rendering: optimizeLegibility;
+}
+
+main {
+  flex: 1;
 }
 
 p {
@@ -91,7 +98,7 @@ a {
   color: #fff;
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.12em;
   line-height: 1;
   text-decoration: none;
 }
@@ -181,22 +188,52 @@ a {
   text-align: center;
 }
 
+.kicker {
+  margin: 0 0 1.1rem;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .hero h1 {
   margin: 0;
-  padding-left: 0.16em;
-  font-size: clamp(2.9rem, 11vw, 7.9rem);
+  padding-left: 0.08em;
+  font-size: clamp(2.6rem, 8vw, 5.6rem);
   font-weight: 500;
-  letter-spacing: 0.16em;
-  line-height: 0.9;
+  letter-spacing: 0.08em;
+  line-height: 0.95;
   text-transform: uppercase;
 }
 
 .hero .sub {
-  max-width: 36em;
-  margin: 1.75rem auto 0;
-  font-size: clamp(1rem, 2.1vw, 1.25rem);
+  max-width: 34em;
+  margin: 1.5rem auto 0;
+  font-size: clamp(1rem, 2.1vw, 1.2rem);
   font-weight: 400;
   letter-spacing: 0.01em;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.hero-actions .btn {
+  margin-top: 0;
+}
+
+.btn.on-dark {
+  border-color: rgba(255, 255, 255, 0.72);
+  color: #fff;
+}
+
+.btn.on-dark:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .section {
@@ -272,6 +309,14 @@ a {
 
 .card:hover {
   border-top-color: var(--accent);
+}
+
+.card-index {
+  display: block;
+  margin-bottom: 12px;
+  color: #8a8a8a;
+  font-size: 12px;
+  letter-spacing: 0.16em;
 }
 
 .card h3 {
@@ -363,6 +408,31 @@ a {
   color: var(--accent);
 }
 
+.text-link {
+  color: var(--charcoal);
+  text-underline-offset: 4px;
+}
+
+.text-link:hover {
+  color: var(--accent);
+}
+
+.founder {
+  padding: calc(var(--nav-h) + 88px) 0 112px;
+}
+
+.founder h1 {
+  margin: 0 0 1.75rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.founder-inner {
+  max-width: 40rem;
+}
+
 .js .reveal {
   opacity: 0;
   transform: translateY(12px);
@@ -377,6 +447,10 @@ a {
 @media (min-width: 800px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards.work {
+    grid-template-columns: 1fr 1fr;
   }
 
   .steps {

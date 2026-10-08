@@ -1,15 +1,23 @@
 ---
 interface Props {
   title: string;
+  kicker: string;
   subtitle: string;
+  workLabel: string;
+  email: string;
 }
 
-const { title, subtitle } = Astro.props;
+const { title, kicker, subtitle, workLabel, email } = Astro.props;
 ---
 
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-inner">
+    <p class="kicker">{kicker}</p>
     <h1 id="hero-title">{title}</h1>
     <p class="sub">{subtitle}</p>
+    <div class="hero-actions">
+      <a class="btn on-dark" href="#portfolio">{workLabel}</a>
+      <a class="btn on-dark" href={`mailto:${email}`}>{email}</a>
+    </div>
   </div>
 </section>

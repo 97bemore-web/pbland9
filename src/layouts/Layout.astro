@@ -11,8 +11,9 @@ interface Props {
 
 const { locale, title, description } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? siteUrl).href;
-const koUrl = getAbsoluteLocaleUrl('ko');
-const enUrl = getAbsoluteLocaleUrl('en');
+const rest = Astro.url.pathname.replace(/^\/(en|ko)\/?/, '');
+const koUrl = getAbsoluteLocaleUrl('ko', rest);
+const enUrl = getAbsoluteLocaleUrl('en', rest);
 const ogLocale = locale === 'ko' ? 'ko_KR' : 'en_US';
 const ogAlternate = locale === 'ko' ? 'en_US' : 'ko_KR';
 ---

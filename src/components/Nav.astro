@@ -4,6 +4,7 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 
 interface NavLabels {
   about: string;
+  founder: string;
   services: string;
   portfolio: string;
   process: string;
@@ -19,6 +20,8 @@ interface Props {
 
 const { locale, labels, navLabel, langLabel } = Astro.props;
 const home = getRelativeLocaleUrl(locale);
+const atHome = Astro.url.pathname.replace(/\/$/, '') === home.replace(/\/$/, '');
+const hash = (id: string) => (atHome ? `#${id}` : `${home}#${id}`);
 const items = [
   ['about', labels.about],
   ['services', labels.services],
@@ -34,9 +37,12 @@ const items = [
     <nav class="nav-links" aria-label={navLabel}>
       {
         items.map(([id, label]) => (
-          <a href={`#${id}`}>{label}</a>
+          <a href={hash(id)}>{label}</a>
         ))
       }
+      <a href={getRelativeLocaleUrl(locale, 'founder')} aria-current={Astro.url.pathname.includes('/founder') ? 'page' : undefined}>
+        {labels.founder}
+      </a>
     </nav>
     <LangSwitch locale={locale} label={langLabel} />
   </div>

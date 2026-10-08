@@ -1,12 +1,14 @@
 ---
 interface Props {
   title: string;
+  index?: string;
 }
 
-const { title } = Astro.props;
+const { title, index } = Astro.props;
 ---
 
 <article class="card">
+  {index && <span class="card-index">{index}</span>}
   <h3>{title}</h3>
   <slot />
 </article>

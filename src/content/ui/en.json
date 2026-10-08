@@ -10,6 +10,7 @@
   },
   "nav": {
     "about": "About",
+    "founder": "Founder",
     "services": "Services",
     "portfolio": "Work",
     "process": "Process",
@@ -17,7 +18,9 @@
   },
   "hero": {
     "title": "PBLAND9",
-    "subtitle": "Since 2026. A seed-stage startup based in Korea and Japan."
+    "kicker": "Since 2026 · Korea and Japan",
+    "subtitle": "We build small businesses quickly, take on outsourced development, and add the features a client needs next.",
+    "work": "See the work"
   },
   "about": {
     "heading": "About",
@@ -25,6 +28,16 @@
       "PBLAND9 is a seed-stage startup, since 2026, based in Korea and Japan. Friends from various industries come together to quickly build small businesses, take on outsourced development, and rapidly add features for clients.",
       "We turn an idea into something that actually runs, in short cycles, then keep attaching the automation and integrations that day-to-day operations need.",
       "We would rather finish what is needed now and move to the next step than grow the scope for its own sake."
+    ]
+  },
+  "founder": {
+    "link": "About the founder",
+    "title": "About the founder",
+    "description": "The founder of PBLAND9 studied in Japan and has worked in consulting and corporate strategy.",
+    "paragraphs": [
+      "The founder studied at a leading university in Japan and holds several professional qualifications.",
+      "The experience includes a top consulting firm, and a strategy office inside a company, supporting the C-suite.",
+      "The work covers many projects across media and technology."
     ]
   },
   "services": {
@@ -71,8 +84,8 @@
   },
   "contact": {
     "heading": "Contact",
-    "body": "For a small business, outsourced development, or a feature to add, email cs_pbland9@pbland9.com. Want more? You can request materials. Email that address.",
-    "button": "Email us"
+    "body": "For a small business, outsourced development, or a feature to add, use the address below. Want more? You can request materials there too.",
+    "button": "cs_pbland9@pbland9.com"
   },
   "footer": {
     "rights": "© PBLAND9"

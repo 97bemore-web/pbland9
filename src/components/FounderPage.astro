@@ -1,0 +1,34 @@
+---
+import { getEntry } from 'astro:content';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import Layout from '../layouts/Layout.astro';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  locale: 'ko' | 'en';
+}
+
+const { locale } = Astro.props;
+const uiEntry = await getEntry('ui', locale);
+if (!uiEntry) {
+  throw new Error(`Missing UI strings: src/content/ui/${locale}.json`);
+}
+const ui = uiEntry.data;
+const home = getRelativeLocaleUrl(locale);
+---
+
+<Layout locale={locale} title={ui.founder.title} description={ui.founder.description}>
+  <a class="skip" href="#main">{ui.aria.skip}</a>
+  <Nav locale={locale} labels={ui.nav} navLabel={ui.aria.nav} langLabel={ui.aria.lang} />
+  <main id="main" class="founder">
+    <div class="wrap founder-inner">
+      <h1>{ui.founder.title}</h1>
+      <div class="about-copy">
+        {ui.founder.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <a class="text-link" href={home}>{ui.hero.title}</a>
+    </div>
+  </main>
+  <Footer rights={ui.footer.rights} />
+</Layout>

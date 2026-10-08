@@ -7,8 +7,9 @@ interface Props {
 }
 
 const { locale, label } = Astro.props;
-const koHref = getRelativeLocaleUrl('ko');
-const enHref = getRelativeLocaleUrl('en');
+const rest = Astro.url.pathname.replace(/^\/(en|ko)\/?/, '').replace(/\/$/, '');
+const koHref = getRelativeLocaleUrl('ko', rest);
+const enHref = getRelativeLocaleUrl('en', rest);
 ---
 
 <div class="lang" role="group" aria-label={label}>

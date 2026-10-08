@@ -17,6 +17,7 @@ const ui = defineCollection({
     }),
     nav: z.object({
       about: text,
+      founder: text,
       services: text,
       portfolio: text,
       process: text,
@@ -24,11 +25,19 @@ const ui = defineCollection({
     }),
     hero: z.object({
       title: text,
+      kicker: text,
       subtitle: text,
+      work: text,
     }),
     about: z.object({
       heading: text,
       paragraphs: z.array(text).min(2).max(3),
+    }),
+    founder: z.object({
+      link: text,
+      title: text,
+      description: text,
+      paragraphs: z.array(text).min(2).max(4),
     }),
     services: z.object({
       heading: text,

@@ -32,6 +32,7 @@ components:
         type: object
         fields:
           - { name: about, type: string }
+          - { name: founder, type: string }
           - { name: services, type: string }
           - { name: portfolio, type: string }
           - { name: process, type: string }
@@ -41,12 +42,22 @@ components:
         type: object
         fields:
           - { name: title, type: string, required: true }
+          - { name: kicker, type: string, required: true }
           - { name: subtitle, type: string, required: true }
+          - { name: work, type: string, required: true }
       - name: about
         label: 소개
         type: object
         fields:
           - { name: heading, type: string }
+          - { name: paragraphs, label: 문단, type: text, list: true }
+      - name: founder
+        label: 창업자
+        type: object
+        fields:
+          - { name: link, type: string }
+          - { name: title, type: string }
+          - { name: description, type: string }
           - { name: paragraphs, label: 문단, type: text, list: true }
       - name: services
         label: 하는 일
