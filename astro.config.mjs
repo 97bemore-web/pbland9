@@ -20,7 +20,7 @@ export default defineConfig({
     locales: ['ko', 'en'],
     routing: {
       prefixDefaultLocale: true,
-      redirectToDefaultLocale: true,
+      redirectToDefaultLocale: false,
     },
   },
   integrations: [

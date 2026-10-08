@@ -1,6 +1,6 @@
 # PBLAND
 
-한국어·영어 한 페이지 정적 사이트입니다. Astro 5로 만들고, Cloudflare Pages에 올리는 것을 기준으로 합니다.
+한국어·영어 한 페이지 정적 사이트입니다. Astro 5로 만들고, GitHub Pages에 커스텀 도메인 `pbland9.com` 으로 올리는 것을 기준으로 합니다. `base` 는 `/` 입니다. 저장소 이름과 무관합니다.
 
 ## 실행
 
@@ -49,22 +49,38 @@ order: 7
 
 ## 도메인·이메일
 
-아직 정해지지 않았습니다. 자리표시자는 `src/site.config.ts` 한 곳에만 있습니다.
+`src/site.config.ts` 한 곳에서 읽습니다.
 
-- `email`: `contact@pbland.example`
-- `domain`: `pbland.example`
+- `email`: `contact@pbland9.com`
+- `domain`: `pbland9.com`
 
-버튼, 푸터, canonical, Open Graph, `robots.txt` 의 사이트맵 주소는 이 값을 읽습니다. `npm run dev` 또는 `npm run build` 를 실행하면 `public/robots.txt` 가 이 도메인으로 다시 써집니다. 전화번호와 주소는 넣지 않습니다.
+버튼, 푸터, canonical, Open Graph, `robots.txt` 의 사이트맵 주소는 이 값을 읽습니다. `npm run dev` 또는 `npm run build` 를 실행하면 `public/robots.txt` 가 이 도메인으로 다시 써집니다. 전화번호와 주소는 넣지 않습니다. `public/CNAME` 도 같은 도메인이어야 합니다.
 
-## Cloudflare Pages
+## GitHub Pages
 
-1. 이 폴더를 GitHub 저장소에 푸시합니다.
-2. Cloudflare Pages에서 그 저장소를 연결합니다.
-3. 프레임워크 프리셋은 Astro, 빌드 명령은 `npm run build`, 출력 디렉터리는 `dist` 입니다.
-4. 어댑터는 필요 없습니다. 정적 파일만 배포합니다.
-5. 커스텀 도메인을 연결한 뒤 `src/site.config.ts` 의 `domain` 과 `email` 을 실제 값으로 바꿉니다.
+1. GitHub에 Public 저장소를 만들고, 이 폴더를 `main` 브랜치로 푸시합니다. 저장소 이름은 `pbland9.com` 이든 `site` 이든 상관없습니다. 커스텀 도메인을 쓰므로 사이트 주소는 `https://pbland9.com` 입니다.
+2. 저장소 Settings → Pages → Source 를 **GitHub Actions** 로 둡니다. `main` 에 푸시하면 `.github/workflows/deploy.yml` 이 빌드하고 배포합니다.
+3. 같은 Pages 설정에서 Custom domain 에 `pbland9.com` 을 넣습니다. DNS 확인이 끝나면 Enforce HTTPS 를 켭니다.
 
-루트 `/` 는 기본 로케일인 `/ko/` 로 보냅니다. Astro가 만드는 메타 리프레시와 함께, Cloudflare용 `public/_redirects` 에 `/ /ko/ 302` 가 들어 있습니다.
+도메인은 Cloudflare Registrar 에 등록되어 있고, DNS 도 Cloudflare 입니다. 아래 레코드는 프록시를 끄고 **DNS only** 로 둡니다.
+
+- `A` `@` `185.199.108.153`
+- `A` `@` `185.199.109.153`
+- `A` `@` `185.199.110.153`
+- `A` `@` `185.199.111.153`
+- `AAAA` `@` `2606:50c0:8000::153`
+- `AAAA` `@` `2606:50c0:8001::153`
+- `AAAA` `@` `2606:50c0:8002::153`
+- `AAAA` `@` `2606:50c0:8003::153`
+- `CNAME` `www` `<github-username>.github.io`
+
+Cloudflare Email Routing 이 넣는 MX, TXT 는 위 A, AAAA, CNAME 과 같이 두면 됩니다.
+
+루트 `/` 는 `dist/index.html` 이 `/ko/` 로 바로 넘깁니다. GitHub Pages 는 `_astro/` 를 Jekyll 로 처리하지 않도록 `public/.nojekyll` 을 넣습니다.
+
+## Cloudflare Pages로 바꾸려면
+
+GitHub Actions 대신 Cloudflare Pages 에 연결하면 됩니다. 프레임워크 프리셋은 Astro, 빌드 명령은 `npm run build`, 출력 디렉터리는 `dist` 입니다. 어댑터는 필요 없습니다.
 
 ## 팀 섹션
 

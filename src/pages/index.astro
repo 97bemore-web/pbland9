@@ -1,16 +1,17 @@
 ---
 import { siteUrl } from '../site.config';
 
-// `/` redirects to `/ko/` via Astro i18n. The Korean page is `src/pages/ko/index.astro`.
-const target = new URL('/ko/', siteUrl).href;
+const canonical = new URL('/ko/', siteUrl).href;
 ---
 
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
     <title>PBLAND</title>
-    <meta http-equiv="refresh" content="0;url=/ko/" />
-    <link rel="canonical" href={target} />
+    <link rel="canonical" href={canonical} />
+    <meta http-equiv="refresh" content="0; url=/ko/" />
+    <script is:inline>location.replace('/ko/' + location.search + location.hash)</script>
   </head>
   <body>
     <a href="/ko/">PBLAND</a>
