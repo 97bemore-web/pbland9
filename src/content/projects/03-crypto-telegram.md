@@ -1,7 +1,7 @@
 ---
-title_ko: "가상화폐 시그널 수신 + 텔레그램 연동 지원"
-title_en: "Crypto signal receiving + Telegram integration"
-summary_ko: "가상화폐 시그널을 받아 텔레그램으로 전달하는 연동을 지원합니다. 신호를 받는 쪽과 알림이 가는 쪽을 단순하게 잇습니다."
-summary_en: "Support for receiving crypto signals and passing them to Telegram. The path from an incoming signal to the notification stays straightforward."
+title_ko: "가상화폐 시그널과 텔레그램"
+title_en: "Crypto signals to Telegram"
+summary_ko: "가상화폐 시그널을 받아 텔레그램 알림으로 넘깁니다. 신호에서 알림까지 경로를 짧게 유지합니다."
+summary_en: "Takes an incoming crypto signal and sends the Telegram notice. The path from signal to notification stays short."
 order: 3
 ---
