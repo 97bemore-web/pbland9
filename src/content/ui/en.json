@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "PBLAND9",
-    "description": "PBLAND9 started in June 2026 in Korea and Japan. Our API sends chart-style music data to Claude, which finds bottlenecks and insights. know-thyself is a popular Toss mini app across 13 cities."
+    "description": "PBLAND9 started in June 2026 in Korea and Japan. Our API sends Chartmetric-style music data to Claude, which finds bottlenecks and insights. know-thyself is a popular Toss mini app across 13 cities."
   },
   "aria": {
     "nav": "Primary",
@@ -19,7 +19,7 @@
   "hero": {
     "title": "PBLAND9",
     "kicker": "Since June 2026 · Korea and Japan",
-    "subtitle": "Our API sends chart-style music data to Claude. Claude finds the bottlenecks and the insights a leading K-pop company uses.",
+    "subtitle": "Our API sends Chartmetric-style music data to Claude. Claude finds the bottlenecks and the insights a leading K-pop company uses.",
     "work": "See the work",
     "imageAlt": "A thin red signal on a dark field."
   },
@@ -40,7 +40,7 @@
   "about": {
     "heading": "About",
     "paragraphs": [
-      "PBLAND9 started in June 2026 and works in Korea and Japan. The music service is already running: the API and Claude talk, and Claude returns bottlenecks and insights for C-level leaders at a leading K-pop company.",
+      "PBLAND9 started in June 2026 and works in Korea and Japan. The music service is already running: Chartmetric-style data goes through the API, Claude talks back, and C-level leaders at a leading K-pop company use the bottlenecks and insights.",
       "know-thyself became a popular Toss mini app. It compares take-home pay across 13 cities. A lotto tool has given more than 20,000 people a meaningful purchase. KakaoTalk API work, and the jobs around it, has saved more than 20,000 hours. A YouTube channel we worked on grew.",
       "We also help public-sector teams with image-making, so they can communicate more clearly."
     ]
@@ -60,7 +60,7 @@
     "items": [
       {
         "title": "Music insights",
-        "body": "Chart-style music data goes from our API to Claude. Claude finds bottlenecks and the insights C-level leaders use."
+        "body": "Chartmetric-style music data goes from our API to Claude. Claude finds bottlenecks and the insights C-level leaders use."
       },
       {
         "title": "Tools already in use",
@@ -80,20 +80,20 @@
     "heading": "How we work",
     "steps": [
       {
-        "title": "Consultation",
-        "body": "We talk through what you want to build, and how much of it is needed now."
+        "title": "Send the data",
+        "body": "Chartmetric-style music data leaves through our API."
       },
       {
-        "title": "Confirm scope",
-        "body": "We split what this round will include from what can wait, and agree the scope."
+        "title": "Claude reads it",
+        "body": "Claude and the API talk. The model sees the current numbers, not a pasted summary."
       },
       {
-        "title": "Rapid build",
-        "body": "We implement the agreed scope in a short cycle and hand over something you can actually use."
+        "title": "Find the bottleneck",
+        "body": "Claude returns the bottleneck and the insight, not a pile of charts."
       },
       {
-        "title": "Operate and extend",
-        "body": "As it runs, we attach the operational work and the next features that show up."
+        "title": "Hand it to the people using it",
+        "body": "C-level leaders at a leading K-pop company use that result."
       }
     ]
   },
