@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "PBLAND9",
-    "description": "PBLAND9 is a seed-stage startup, since 2026, based in Korea and Japan. Friends from various industries quickly build small businesses, take on outsourced development, and add features for clients."
+    "description": "PBLAND9 started in June 2026 in Korea and Japan. Our API sends chart-style music data to Claude, which finds bottlenecks and insights. know-thyself is a popular Toss mini app across 13 cities."
   },
   "aria": {
     "nav": "Primary",
@@ -18,16 +18,16 @@
   },
   "hero": {
     "title": "PBLAND9",
-    "kicker": "Since 2026 · Korea and Japan",
-    "subtitle": "We build small businesses quickly, take on outsourced development, and add the features a client needs next.",
+    "kicker": "Since June 2026 · Korea and Japan",
+    "subtitle": "Our API sends chart-style music data to Claude. Claude finds the bottlenecks and the insights a leading K-pop company uses.",
     "work": "See the work"
   },
   "about": {
     "heading": "About",
     "paragraphs": [
-      "PBLAND9 is a seed-stage startup, since 2026, based in Korea and Japan. Friends from various industries come together to quickly build small businesses, take on outsourced development, and rapidly add features for clients.",
-      "We turn an idea into something that actually runs, in short cycles, then keep attaching the automation and integrations that day-to-day operations need.",
-      "We would rather finish what is needed now and move to the next step than grow the scope for its own sake."
+      "PBLAND9 started in June 2026 and works in Korea and Japan. The music service is already running: the API and Claude talk, and Claude returns bottlenecks and insights for C-level leaders at a leading K-pop company.",
+      "know-thyself became a popular Toss mini app. It compares take-home pay across 13 cities. A lotto tool has given more than 20,000 people a meaningful purchase. KakaoTalk API work, and the jobs around it, has saved more than 20,000 hours.",
+      "We also help public-sector teams with image-making, so they can communicate more clearly."
     ]
   },
   "founder": {
@@ -44,22 +44,22 @@
     "heading": "Services",
     "items": [
       {
-        "title": "Fast MVP and small-business builds",
-        "body": "We put up the first working form of a small business quickly, cut to a range you can use and check."
+        "title": "Music insights",
+        "body": "Chart-style music data goes from our API to Claude. Claude finds bottlenecks and the insights C-level leaders use."
       },
       {
-        "title": "Outsourced development",
-        "body": "We take on development that already has a direction, and build the screens, integrations, and operational features inside an agreed scope."
+        "title": "Tools already in use",
+        "body": "know-thyself is popular on Toss and covers 13 cities. A lotto tool has given more than 20,000 people a meaningful purchase. KakaoTalk API work has saved more than 20,000 hours."
       },
       {
-        "title": "Feature additions and operations automation",
-        "body": "We add features to a service that is already running, or automate the repetitive work of operating it."
+        "title": "Public-sector image-making",
+        "body": "We help public-sector teams present themselves clearly, so communication with them takes less back and forth."
       }
     ]
   },
   "portfolio": {
     "heading": "Work",
-    "lede": "Development support we have taken on."
+    "lede": "Work already in use."
   },
   "process": {
     "heading": "How we work",
@@ -84,7 +84,7 @@
   },
   "contact": {
     "heading": "Contact",
-    "body": "For a small business, outsourced development, or a feature to add, use the address below. Want more? You can request materials there too.",
+    "body": "For music insights, a tool already in use, or public-sector image-making, use the address below. You can request materials there too.",
     "button": "cs_pbland9@pbland9.com"
   },
   "footer": {
