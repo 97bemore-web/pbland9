@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "PBLAND",
+    "description": "PBLAND is where friends from various industries quickly build small businesses, take on outsourced development, and add features for clients."
+  },
+  "aria": {
+    "nav": "Primary",
+    "lang": "Language",
+    "skip": "Skip to content"
+  },
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Work",
+    "process": "Process",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "PBLAND",
+    "subtitle": "Small businesses, built quickly"
+  },
+  "about": {
+    "heading": "About",
+    "paragraphs": [
+      "PBLAND is a company where friends from various industries come together to quickly build small businesses, take on outsourced development work, and rapidly add features for clients.",
+      "We turn an idea into something that actually runs, in short cycles, then keep attaching the automation and integrations that day-to-day operations need.",
+      "We would rather finish what is needed now and move to the next step than grow the scope for its own sake."
+    ]
+  },
+  "services": {
+    "heading": "Services",
+    "items": [
+      {
+        "title": "Fast MVP and small-business builds",
+        "body": "We put up the first working form of a small business quickly, cut to a range you can use and check."
+      },
+      {
+        "title": "Outsourced development",
+        "body": "We take on development that already has a direction, and build the screens, integrations, and operational features inside an agreed scope."
+      },
+      {
+        "title": "Feature additions and operations automation",
+        "body": "We add features to a service that is already running, or automate the repetitive work of operating it."
+      }
+    ]
+  },
+  "portfolio": {
+    "heading": "Work",
+    "lede": "Development support we have taken on."
+  },
+  "process": {
+    "heading": "How we work",
+    "steps": [
+      {
+        "title": "Consultation",
+        "body": "We talk through what you want to build, and how much of it is needed now."
+      },
+      {
+        "title": "Confirm scope",
+        "body": "We split what this round will include from what can wait, and agree the scope."
+      },
+      {
+        "title": "Rapid build",
+        "body": "We implement the agreed scope in a short cycle and hand over something you can actually use."
+      },
+      {
+        "title": "Operate and extend",
+        "body": "As it runs, we attach the operational work and the next features that show up."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Contact",
+    "body": "For a small business, outsourced development, or a feature you need added, send an email.",
+    "button": "Email us"
+  },
+  "footer": {
+    "rights": "© PBLAND"
+  }
+}

@@ -1,0 +1,87 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Nav from './Nav.astro';
+import Hero from './Hero.astro';
+import Section from './Section.astro';
+import Card from './Card.astro';
+import Footer from './Footer.astro';
+import { siteConfig } from '../site.config';
+
+interface Props {
+  locale: 'ko' | 'en';
+}
+
+const { locale } = Astro.props;
+const uiEntry = await getEntry('ui', locale);
+if (!uiEntry) {
+  throw new Error(`Missing UI strings: src/content/ui/${locale}.json`);
+}
+const ui = uiEntry.data;
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const orders = projects.map((project) => project.data.order);
+if (new Set(orders).size !== orders.length) {
+  throw new Error('Portfolio frontmatter "order" values must be unique in src/content/projects.');
+}
+
+const titleOf = (project: (typeof projects)[number]) =>
+  locale === 'ko' ? project.data.title_ko : project.data.title_en;
+const summaryOf = (project: (typeof projects)[number]) =>
+  locale === 'ko' ? project.data.summary_ko : project.data.summary_en;
+---
+
+<Layout locale={locale} title={ui.meta.title} description={ui.meta.description}>
+  <a class="skip" href="#main">{ui.aria.skip}</a>
+  <Nav locale={locale} labels={ui.nav} navLabel={ui.aria.nav} langLabel={ui.aria.lang} />
+  <main id="main">
+    <Hero title={ui.hero.title} subtitle={ui.hero.subtitle} />
+    <Section id="about" heading={ui.about.heading}>
+      <div class="about-copy">
+        {ui.about.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </Section>
+    <Section id="services" heading={ui.services.heading}>
+      <div class="cards">
+        {
+          ui.services.items.map((item) => (
+            <Card title={item.title}>
+              <p>{item.body}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </Section>
+    <Section id="portfolio" heading={ui.portfolio.heading} lede={ui.portfolio.lede}>
+      <div class="cards">
+        {
+          projects.map((project) => (
+            <Card title={titleOf(project)}>
+              <p>{summaryOf(project)}</p>
+            </Card>
+          ))
+        }
+      </div>
+    </Section>
+    <Section id="process" heading={ui.process.heading} tone="dark">
+      <ol class="steps">
+        {
+          ui.process.steps.map((step, index) => (
+            <li class="step">
+              <span class="num">{String(index + 1).padStart(2, '0')}</span>
+              <h3>{step.title}</h3>
+              <p>{step.body}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </Section>
+    <Section id="contact" heading={ui.contact.heading}>
+      <div class="contact">
+        <p>{ui.contact.body}</p>
+        <a class="btn" href={`mailto:${siteConfig.email}`}>{ui.contact.button}</a>
+      </div>
+    </Section>
+  </main>
+  <Footer rights={ui.footer.rights} />
+</Layout>

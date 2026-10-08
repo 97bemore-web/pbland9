@@ -1,0 +1,18 @@
+---
+import { siteUrl } from '../site.config';
+
+// `/` redirects to `/ko/` via Astro i18n. The Korean page is `src/pages/ko/index.astro`.
+const target = new URL('/ko/', siteUrl).href;
+---
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>PBLAND</title>
+    <meta http-equiv="refresh" content="0;url=/ko/" />
+    <link rel="canonical" href={target} />
+  </head>
+  <body>
+    <a href="/ko/">PBLAND</a>
+  </body>
+</html>

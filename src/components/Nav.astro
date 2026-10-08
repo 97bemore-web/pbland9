@@ -1,0 +1,43 @@
+---
+import LangSwitch from './LangSwitch.astro';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+interface NavLabels {
+  about: string;
+  services: string;
+  portfolio: string;
+  process: string;
+  contact: string;
+}
+
+interface Props {
+  locale: 'ko' | 'en';
+  labels: NavLabels;
+  navLabel: string;
+  langLabel: string;
+}
+
+const { locale, labels, navLabel, langLabel } = Astro.props;
+const home = getRelativeLocaleUrl(locale);
+const items = [
+  ['about', labels.about],
+  ['services', labels.services],
+  ['portfolio', labels.portfolio],
+  ['process', labels.process],
+  ['contact', labels.contact],
+] as const;
+---
+
+<header class="nav">
+  <a class="wordmark" href={home}>PBLAND</a>
+  <div class="nav-end">
+    <nav class="nav-links" aria-label={navLabel}>
+      {
+        items.map(([id, label]) => (
+          <a href={`#${id}`}>{label}</a>
+        ))
+      }
+    </nav>
+    <LangSwitch locale={locale} label={langLabel} />
+  </div>
+</header>

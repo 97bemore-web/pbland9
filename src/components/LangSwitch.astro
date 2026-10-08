@@ -1,0 +1,18 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+interface Props {
+  locale: 'ko' | 'en';
+  label: string;
+}
+
+const { locale, label } = Astro.props;
+const koHref = getRelativeLocaleUrl('ko');
+const enHref = getRelativeLocaleUrl('en');
+---
+
+<div class="lang" role="group" aria-label={label}>
+  <a href={koHref} hreflang="ko" lang="ko" aria-current={locale === 'ko' ? 'page' : undefined}>KO</a>
+  <span aria-hidden="true">|</span>
+  <a href={enHref} hreflang="en" lang="en" aria-current={locale === 'en' ? 'page' : undefined}>EN</a>
+</div>

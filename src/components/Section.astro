@@ -1,0 +1,22 @@
+---
+interface Props {
+  id: string;
+  heading: string;
+  lede?: string;
+  tone?: 'light' | 'dark';
+}
+
+const { id, heading, lede, tone = 'light' } = Astro.props;
+---
+
+<section id={id} class:list={['section', 'reveal', tone]}>
+  <div class="wrap">
+    <div class="section-head">
+      <h2><span class="mark" aria-hidden="true"></span>{heading}</h2>
+      {lede && <p class="lede">{lede}</p>}
+    </div>
+    <div class="section-body">
+      <slot />
+    </div>
+  </div>
+</section>
