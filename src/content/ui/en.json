@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "PBLAND",
-    "description": "PBLAND is where friends from various industries quickly build small businesses, take on outsourced development, and add features for clients."
+    "description": "PBLAND is a seed-stage startup, since 2026, based in Korea and Japan. Friends from various industries quickly build small businesses, take on outsourced development, and add features for clients."
   },
   "aria": {
     "nav": "Primary",
@@ -17,12 +17,12 @@
   },
   "hero": {
     "title": "PBLAND",
-    "subtitle": "Small businesses, built quickly"
+    "subtitle": "Since 2026. A seed-stage startup based in Korea and Japan."
   },
   "about": {
     "heading": "About",
     "paragraphs": [
-      "PBLAND is a company where friends from various industries come together to quickly build small businesses, take on outsourced development work, and rapidly add features for clients.",
+      "PBLAND is a seed-stage startup, since 2026, based in Korea and Japan. Friends from various industries come together to quickly build small businesses, take on outsourced development, and rapidly add features for clients.",
       "We turn an idea into something that actually runs, in short cycles, then keep attaching the automation and integrations that day-to-day operations need.",
       "We would rather finish what is needed now and move to the next step than grow the scope for its own sake."
     ]
