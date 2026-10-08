@@ -1,5 +1,5 @@
 ---
-import { siteConfig } from '../site.config';
+import { siteConfig, siteUrl } from '../site.config';
 
 interface Props {
   rights: string;
@@ -11,6 +11,7 @@ const { rights } = Astro.props;
 <footer class="site-footer">
   <div class="wrap footer-row">
     <p>{rights}</p>
+    <a href={siteUrl}>{siteConfig.domain}</a>
     <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
   </div>
 </footer>

@@ -28,6 +28,23 @@ const ui = defineCollection({
       kicker: text,
       subtitle: text,
       work: text,
+      imageAlt: text,
+    }),
+    facts: z.object({
+      items: z
+        .array(
+          z.object({
+            label: text,
+            value: text,
+          }),
+        )
+        .length(4),
+    }),
+    pictures: z.object({
+      channel: text,
+      channelCaption: text,
+      cards: text,
+      cardsCaption: text,
     }),
     about: z.object({
       heading: text,

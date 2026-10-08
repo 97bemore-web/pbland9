@@ -5,9 +5,10 @@ interface Props {
   subtitle: string;
   workLabel: string;
   email: string;
+  imageAlt: string;
 }
 
-const { title, kicker, subtitle, workLabel, email } = Astro.props;
+const { title, kicker, subtitle, workLabel, email, imageAlt } = Astro.props;
 ---
 
 <section class="hero" aria-labelledby="hero-title">
@@ -15,6 +16,7 @@ const { title, kicker, subtitle, workLabel, email } = Astro.props;
     <p class="kicker">{kicker}</p>
     <h1 id="hero-title">{title}</h1>
     <p class="sub">{subtitle}</p>
+    <img class="hero-figure" src="/images/hero-signal.jpg" alt={imageAlt} width="1600" height="900" />
     <div class="hero-actions">
       <a class="btn on-dark" href="#portfolio">{workLabel}</a>
       <a class="btn on-dark" href={`mailto:${email}`}>{email}</a>

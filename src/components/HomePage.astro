@@ -42,8 +42,31 @@ const summaryOf = (project: (typeof projects)[number]) =>
       subtitle={ui.hero.subtitle}
       workLabel={ui.hero.work}
       email={siteConfig.email}
+      imageAlt={ui.hero.imageAlt}
     />
+    <section class="facts" aria-label={ui.about.heading}>
+      <dl class="wrap facts-row">
+        {
+          ui.facts.items.map((item) => (
+            <div>
+              <dt>{item.label}</dt>
+              <dd>{item.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
     <Section id="about" heading={ui.about.heading}>
+      <div class="pair">
+        <figure>
+          <img src="/images/service-channel.jpg" alt={ui.pictures.channel} width="1200" height="900" />
+          <figcaption>{ui.pictures.channelCaption}</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/service-cards.jpg" alt={ui.pictures.cards} width="1200" height="900" />
+          <figcaption>{ui.pictures.cardsCaption}</figcaption>
+        </figure>
+      </div>
       <div class="about-copy">
         {ui.about.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
         <p><a class="text-link" href={getRelativeLocaleUrl(locale, 'founder')}>{ui.founder.link}</a></p>

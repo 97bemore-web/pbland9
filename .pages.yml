@@ -45,6 +45,26 @@ components:
           - { name: kicker, type: string, required: true }
           - { name: subtitle, type: string, required: true }
           - { name: work, type: string, required: true }
+          - { name: imageAlt, type: string, required: true }
+      - name: facts
+        label: 회사 정보
+        type: object
+        fields:
+          - name: items
+            label: 항목
+            type: object
+            list: true
+            fields:
+              - { name: label, type: string, required: true }
+              - { name: value, type: string, required: true }
+      - name: pictures
+        label: 사진 설명
+        type: object
+        fields:
+          - { name: channel, type: string, required: true }
+          - { name: channelCaption, type: text, required: true }
+          - { name: cards, type: string, required: true }
+          - { name: cardsCaption, type: text, required: true }
       - name: about
         label: 소개
         type: object

@@ -20,13 +20,28 @@
     "title": "PBLAND9",
     "kicker": "Since June 2026 · Korea and Japan",
     "subtitle": "Our API sends chart-style music data to Claude. Claude finds the bottlenecks and the insights a leading K-pop company uses.",
-    "work": "See the work"
+    "work": "See the work",
+    "imageAlt": "A thin red signal on a dark field."
+  },
+  "facts": {
+    "items": [
+      { "label": "Company", "value": "PBLAND9" },
+      { "label": "Domain", "value": "pbland9.com" },
+      { "label": "Founded", "value": "June 2026" },
+      { "label": "Email", "value": "cs_pbland9@pbland9.com" }
+    ]
+  },
+  "pictures": {
+    "channel": "A speaker and a rising trace of light.",
+    "channelCaption": "A YouTube channel we worked on grew.",
+    "cards": "Three dark cards joined by a red thread.",
+    "cardsCaption": "13 cities on Toss. More than 20,000 meaningful purchases. More than 20,000 hours saved."
   },
   "about": {
     "heading": "About",
     "paragraphs": [
       "PBLAND9 started in June 2026 and works in Korea and Japan. The music service is already running: the API and Claude talk, and Claude returns bottlenecks and insights for C-level leaders at a leading K-pop company.",
-      "know-thyself became a popular Toss mini app. It compares take-home pay across 13 cities. A lotto tool has given more than 20,000 people a meaningful purchase. KakaoTalk API work, and the jobs around it, has saved more than 20,000 hours.",
+      "know-thyself became a popular Toss mini app. It compares take-home pay across 13 cities. A lotto tool has given more than 20,000 people a meaningful purchase. KakaoTalk API work, and the jobs around it, has saved more than 20,000 hours. A YouTube channel we worked on grew.",
       "We also help public-sector teams with image-making, so they can communicate more clearly."
     ]
   },

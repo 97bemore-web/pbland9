@@ -35,10 +35,20 @@ const ogAlternate = locale === 'ko' ? 'en_US' : 'ko_KR';
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${siteUrl}/images/hero-signal.jpg`} />
     <meta property="og:locale" content={ogLocale} />
     <meta property="og:locale:alternate" content={ogAlternate} />
     <meta name="theme-color" content="#2E2B2B" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: siteConfig.name,
+      url: siteUrl,
+      email: siteConfig.email,
+      foundingDate: '2026-06',
+      areaServed: ['South Korea', 'Japan'],
+    })} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
