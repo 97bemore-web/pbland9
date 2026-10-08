@@ -51,7 +51,7 @@ order: 7
 
 `src/site.config.ts` 한 곳에서 읽습니다.
 
-- `email`: `contact@pbland9.com`
+- `email`: `cs_pbland9@pbland9.com`
 - `domain`: `pbland9.com`
 
 버튼, 푸터, canonical, Open Graph, `robots.txt` 의 사이트맵 주소는 이 값을 읽습니다. `npm run dev` 또는 `npm run build` 를 실행하면 `public/robots.txt` 가 이 도메인으로 다시 써집니다. 전화번호와 주소는 넣지 않습니다. `public/CNAME` 도 같은 도메인이어야 합니다.

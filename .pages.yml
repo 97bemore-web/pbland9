@@ -1,0 +1,117 @@
+# Pages CMS (https://app.pagescms.org) — GitHub 로그인 후 이 저장소를 열면 편집 UI가 뜬다.
+# 저장 = main 커밋 = GitHub Actions 자동 배포.
+media:
+  input: public/media
+  output: /media
+
+components:
+  titled:
+    type: object
+    fields:
+      - { name: title, label: 제목, type: string, required: true }
+      - { name: body, label: 본문, type: text, required: true }
+  # ponytail: YAML 앵커로 ko/en 스키마 공유. 두 파일 키 구조가 같다는 전제.
+  ui:
+    type: object
+    fields: &ui_fields
+      - name: meta
+        label: 메타(검색/공유)
+        type: object
+        fields:
+          - { name: title, type: string, required: true }
+          - { name: description, type: text, required: true }
+      - name: aria
+        label: 접근성 라벨
+        type: object
+        fields:
+          - { name: nav, type: string }
+          - { name: lang, type: string }
+          - { name: skip, type: string }
+      - name: nav
+        label: 메뉴
+        type: object
+        fields:
+          - { name: about, type: string }
+          - { name: services, type: string }
+          - { name: portfolio, type: string }
+          - { name: process, type: string }
+          - { name: contact, type: string }
+      - name: hero
+        label: 첫 화면
+        type: object
+        fields:
+          - { name: title, type: string, required: true }
+          - { name: subtitle, type: string, required: true }
+      - name: about
+        label: 소개
+        type: object
+        fields:
+          - { name: heading, type: string }
+          - { name: paragraphs, label: 문단, type: text, list: true }
+      - name: services
+        label: 하는 일
+        type: object
+        fields:
+          - { name: heading, type: string }
+          - { name: items, label: 항목, component: titled, list: true }
+      - name: portfolio
+        label: 작업 섹션
+        type: object
+        fields:
+          - { name: heading, type: string }
+          - { name: lede, type: string }
+      - name: process
+        label: 진행 방식
+        type: object
+        fields:
+          - { name: heading, type: string }
+          - { name: steps, label: 단계, component: titled, list: true }
+      - name: contact
+        label: 문의
+        type: object
+        fields:
+          - { name: heading, type: string }
+          - { name: body, type: text }
+          - { name: button, type: string }
+      - name: footer
+        type: object
+        fields:
+          - { name: rights, type: string }
+
+content:
+  - name: projects
+    label: 포트폴리오
+    type: collection
+    path: src/content/projects
+    format: yaml-frontmatter
+    filename: "{fields.order}-{primary}.md"
+    view:
+      primary: title_ko
+      sort: order
+      order: asc
+      fields: [order, title_ko, title_en]
+    fields:
+      - { name: order, label: 순서, type: number, required: true }
+      - { name: title_ko, label: 제목(한국어), type: string, required: true }
+      - { name: title_en, label: 제목(영어), type: string, required: true }
+      - { name: summary_ko, label: 설명(한국어), type: text, required: true }
+      - { name: summary_en, label: 설명(영어), type: text, required: true }
+  - name: ui-ko
+    label: 문구 — 한국어
+    type: file
+    path: src/content/ui/ko.json
+    format: json
+    fields:
+      - { name: root, component: ui }
+  - name: ui-en
+    label: 문구 — English
+    type: file
+    path: src/content/ui/en.json
+    format: json
+    fields:
+      - { name: root, component: ui }
+  - name: config
+    label: 도메인·이메일
+    type: file
+    path: src/site.config.ts
+    format: code

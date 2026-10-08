@@ -1,7 +1,7 @@
 /** Domain and contact. Change these two fields when they change. */
 export const siteConfig = {
   name: 'PBLAND',
-  email: 'contact@pbland9.com',
+  email: 'cs_pbland9@pbland9.com',
   domain: 'pbland9.com',
 } as const;
 
