@@ -184,7 +184,7 @@ a {
 .hero h1 {
   margin: 0;
   padding-left: 0.16em;
-  font-size: clamp(3.4rem, 13vw, 9.25rem);
+  font-size: clamp(2.6rem, 9vw, 6.2rem);
   font-weight: 500;
   letter-spacing: 0.16em;
   line-height: 0.9;
