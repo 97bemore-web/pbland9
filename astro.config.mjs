@@ -16,7 +16,7 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
   i18n: {
-    defaultLocale: 'ko',
+    defaultLocale: 'en',
     locales: ['ko', 'en'],
     routing: {
       prefixDefaultLocale: true,
@@ -26,7 +26,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       i18n: {
-        defaultLocale: 'ko',
+        defaultLocale: 'en',
         locales: {
           ko: 'ko-KR',
           en: 'en-US',

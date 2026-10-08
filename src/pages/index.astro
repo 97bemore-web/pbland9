@@ -1,19 +1,19 @@
 ---
 import { siteUrl } from '../site.config';
 
-const canonical = new URL('/ko/', siteUrl).href;
+const canonical = new URL('/en/', siteUrl).href;
 ---
 
 <!doctype html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>PBLAND</title>
     <link rel="canonical" href={canonical} />
-    <meta http-equiv="refresh" content="0; url=/ko/" />
-    <script is:inline>location.replace('/ko/' + location.search + location.hash)</script>
+    <meta http-equiv="refresh" content="0; url=/en/" />
+    <script is:inline>location.replace('/en/' + location.search + location.hash)</script>
   </head>
   <body>
-    <a href="/ko/">PBLAND</a>
+    <a href="/en/">PBLAND</a>
   </body>
 </html>

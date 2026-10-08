@@ -1,7 +1,7 @@
 ---
 title_ko: "토스 미니앱 개발 지원"
-title_en: "Toss MiniApp development support"
-summary_ko: "토스 미니앱으로 서비스를 올리기 위한 화면과 연동 개발을 지원합니다. 미니앱 환경에 맞춰 필요한 기능을 짧게 붙여 출시 준비까지 이어갑니다."
-summary_en: "Development support for bringing a service onto Toss as a mini app. Screens and integrations are fitted to the mini-app environment and carried through launch preparation."
+title_en: "Toss mini app: know-thyself"
+summary_ko: "Apps in Toss 미니앱 know-thyself입니다. 해외 제안을 비교하려는 사람을 위해 13개 도시의 실수령을 나란히 보는 기획과 앱 골격이 있습니다."
+summary_en: "Apps in Toss mini app, know-thyself. The plan and app scaffold compare take-home pay across 13 cities for someone weighing an overseas offer."
 order: 1
 ---

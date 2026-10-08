@@ -9,7 +9,7 @@ npm i
 npm run dev
 ```
 
-개발 서버는 `http://localhost:4321` 입니다. `/` 는 `/ko/` 로 넘어가고, 영어 페이지는 `/en/` 입니다.
+개발 서버는 `http://localhost:4321` 입니다. `/` 는 `/en/` 로 넘어가고, 한국어 페이지는 `/ko/` 입니다.
 
 프로덕션 빌드와 미리보기는 아래와 같습니다.
 
@@ -76,7 +76,7 @@ order: 7
 
 Cloudflare Email Routing 이 넣는 MX, TXT 는 위 A, AAAA, CNAME 과 같이 두면 됩니다.
 
-루트 `/` 는 `dist/index.html` 이 `/ko/` 로 바로 넘깁니다. GitHub Pages 는 `_astro/` 를 Jekyll 로 처리하지 않도록 `public/.nojekyll` 을 넣습니다.
+루트 `/` 는 `dist/index.html` 이 `/en/` 로 바로 넘깁니다. GitHub Pages 는 `_astro/` 를 Jekyll 로 처리하지 않도록 `public/.nojekyll` 을 넣습니다.
 
 ## Cloudflare Pages로 바꾸려면
 
